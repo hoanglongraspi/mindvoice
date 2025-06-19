@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/5.32.1/gradio.js"></script>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MindVoice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
+  <link rel="stylesheet", href="styles.css"/>
+</head>
+
+<body>
+  <div class="center">
+    <div id="title">
+      <a href="https://cse.buffalo.edu/~wenyaoxu/esc.html">
+        Embedded Sensing and Computing
+      </a>
+    </div>
+
+    <div id="subtitle">
+      <a href="https://engineering.buffalo.edu/computer-science-engineering.html">
+        University at Buffalo Department of Computer Science and Engineering
+      </a>
+    </div>
+    <br>
+
+    <h2>
+      MindVoice
+    </h2>
+    
+    <p>
+      Speech impairments pose challenges for automatic speech recognition (ASR) systems, which struggle with slurred pronunciation, unpredictable pauses, and variability in speech patterns. MindVoice is a contrastive learning framework combining speech and EEG, designed to decode speech from neural signals using minimal EEG channels, enabling scalable solutions for speech impairments.
+    </p>
+    <br>
+
+    <p>
+      We developed a robust data collection protocol to record EEG and speech data from 13 participants, which consisted of 20 English words carefully selected to maximize phonemic diversity and three paragraphs commonly used in speaking tests. The stimuli were designed to ensure a broad representation of English phonemes, enabling the model to learn the phonetic patterns of the language. Stimuli presentation was fully automated using PsychoPy and time-synchronized using the Lab Streaming Layer. A multimodal model was trained to encode EEG and speech data into a shared latent space, employing cross-attention to enrich EEG embeddings with temporally aligned speech audio and a contrastive loss to align these embeddings effectively.
+    </p>
+    <br>
+
+    <p>
+      Using the demo below, select a subject and instance index and visualize the predicted text from plain audio, EEG with audio, and heatmaps of the attention layers.
+    </p>
+
+    <div class="container">
+      <gradio-app src="https://2c1e3f448d3ecf2fe4.gradio.live/"></gradio-app>
+    </div>
+  </div>
+</body>
+
+
+</html>
